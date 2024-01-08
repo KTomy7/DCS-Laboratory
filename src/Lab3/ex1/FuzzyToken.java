@@ -1,4 +1,4 @@
-package lab3.ex1;
+package Lab3.ex1;
 
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package lab3.ex5;
+package Lab3.ex3;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,7 +26,7 @@ public class ComparatorExample {
 
     // FLRS table for T1 that makes the selection according to the result P0-P1
     // (positive or negative)
-    String separator = "{[<FF,NL><FF,NL><FF,FF><PL,FF><PL,FF>]}";
+    String separator = "{[<NL,FF><NL,FF><FF,FF><FF,PL><FF,PL>]}";
 
     public ComparatorExample() {
 
@@ -92,16 +92,18 @@ public class ComparatorExample {
         // launching the execution of the thread that contains the executor
         (new Thread(executor)).start();
 
-        for (int i = 0; i < 3600; i++) {
+        for (int i = 0; i < 100; i++) {
 
             // constructing the dictionary collection (map) for inputs
             Map<Integer, FuzzyToken> inps = new HashMap<>();
-
-            // placing the fuzzyficated token
-            double sineValue = Math.sin(Math.toRadians(i));
-            double cosineValue = Math.cos(Math.toRadians(i));
-            inps.put(p0Inp, driver.fuzzifie(sineValue));
-            inps.put(p1Inp, driver.fuzzifie(cosineValue));
+            if (i % 10 < 5) {
+                // placing the fuzzyficated token
+                inps.put(p0Inp, driver.fuzzifie(i / 100.0));
+                inps.put(p1Inp, driver.fuzzifie(i / -100.0));
+            } else {
+                inps.put(p1Inp, driver.fuzzifie(i / 100.0));
+                inps.put(p0Inp, driver.fuzzifie(i / -100.0));
+            }
 
             // placing the input tokens for the executer
             executor.putTokenInInputPlace(inps);

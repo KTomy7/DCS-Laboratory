@@ -1,4 +1,4 @@
-package lab3.ex4;
+package Lab3.ex5;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,7 +26,7 @@ public class ComparatorExample {
 
     // FLRS table for T1 that makes the selection according to the result P0-P1
     // (positive or negative)
-    String separator = "{[<NL,FF><NL,FF><FF,FF><FF,PL><FF,PL>]}";
+    String separator = "{[<FF,NL><FF,NL><FF,FF><PL,FF><PL,FF>]}";
 
     public ComparatorExample() {
 

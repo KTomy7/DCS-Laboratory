@@ -1,9 +1,9 @@
-package lab3.ex2;
+package Lab3.ex2;
 
-import lab3.ex1.FuzzyDefuzzy;
-import lab3.ex1.FuzzyToken;
-import lab3.ex1.FuzzyValue;
-import lab3.ex1.TwoXTwoTable;
+import Lab3.ex1.FuzzyDefuzzy;
+import Lab3.ex1.FuzzyToken;
+import Lab3.ex1.FuzzyValue;
+import Lab3.ex1.TwoXTwoTable;
 
 import java.util.EnumMap;
 import java.util.Map;
